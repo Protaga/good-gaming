@@ -1,0 +1,130 @@
+#errorBlock {
+    display: none;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh; 
+    margin-top: 150px;
+}
+
+.container {
+    justify-content: space-between;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.btn-outline-light {
+    position: relative;
+    border: 2px solid #fff; 
+    color: #fff;
+    background-color: transparent;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.btn-outline-light:hover::after {
+    width: 80%;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff; 
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); 
+    transform: translateY(-2px);
+}
+
+.btn-outline-light:active {
+    background-color: #f8f9fa;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); 
+    transform: translateY(0);
+}
+
+.navbar-brand {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin-left: 2rem;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.navbar-brand:hover {
+    color: #007bff;
+    transform: translateX(5px); 
+}
+
+.navbar-brand:hover span {
+    text-decoration: underline;
+    text-decoration-color: #fff; 
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.footer {
+    margin-top: auto; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #007bff; 
+    line-height: 60px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffcc00; 
+}
